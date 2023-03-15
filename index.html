@@ -4,15 +4,13 @@
 
 <head>
 
-<title>Language translator App</title>
+<title translate="no">Language translator App</title>
 
 <meta name="viewport" content="width=device-width , initial-scale=1">
 
 <style type="text/css">
 
-	*{
-
-		padding:0;
+	*{		padding:0;
 
 		margin:0;
 
@@ -46,7 +44,7 @@
 
 		color:#fff;
 
-		font-size:200%;
+		font-size:30px;
 
 		font-weight:700;
 
@@ -62,7 +60,7 @@
 
 		right:0;
 
-		font-size:150%;
+		font-size:30px;
 
 		padding:8px;
 
@@ -80,9 +78,55 @@
 
 	}
 
-	#google_translate_element {
+	#google_translate_element select{
+
+		background:#f6edfd;
+
+		color:#383ffa;
+
+		border: none;
+
+		border-radius:3px;
+
+		padding:6px 8px;
 
 	}
+
+	.goog-logo-link{
+
+		display:none!important;
+
+	}
+
+	.goog-te-gadget{
+
+		color:transparent!important;
+
+	} 
+
+	.goog-te-banner-frame{
+
+		display:none !important;
+
+	}
+
+	
+
+	#goog-gt-tt, .goog-te-balloon-frame{
+
+		display: none !important;
+
+	}
+
+	.goog-text-highlight { 
+
+		background: none !important; 
+
+		box-shadow: none !important;
+
+	}
+
+	
 
 </style>
 
@@ -104,7 +148,9 @@
 
 	
 
-	<span id="google_translate_element" ></span1>
+	<span id="google_translate_element" >🌐</span>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
 	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
@@ -118,18 +164,19 @@
 
 			'google_translate_element'
 
-	);
+		);
 
-	}
-
-	/*document.querySelector("#google_translate_element").onchange = function(){
-
-		alert(this.value)
-
-	}*/
+		}
 
 	</script>
 
 </body>
 
 </html>
+
+
+
+	
+
+	
+
