@@ -27,18 +27,6 @@
 		text-align:center;
 		padding-top:10px;
 	}
-	#lang {
-		position:fixed;
-		right:0;
-		font-size:30px;
-		padding:8px;
-		background:#d5d5d5;
-		border-radius:10px;
-		margin-right:10px;
-	}
-	#lang:active {
-		background:#ccc;
-	}
 	#google_translate_element select{
 		background:#f6edfd;
 		color:#383ffa;
@@ -47,11 +35,14 @@
 		padding:6px 8px;
 	}
 	.goog-logo-link{
-		display:none!important;
+		display:none !important;
+		visibility:hidden;
 	}
 	.goog-te-gadget{
 		color:transparent!important;
-	} 
+		max-height:30px;
+		overflow:hidden;
+	}
 	.goog-te-banner-frame{
 		display:none !important;
 	}
@@ -63,24 +54,58 @@
 		background: none !important; 
 		box-shadow: none !important;
 	}
-	
+	#google_translate_element {
+		display:flex;
+	}
+	#google_translate_element > * {
+		justify-content:center;
+		justify-items:center;
+	}
+	.container {
+		padding:10px;
+	}
+	.container p {
+		line-height:25px;
+	}
 </style>
 </head>
 <body>
 	<header translate="no">
 		<p>Language Translator App</p>
 	</header>
-	<div id="lang" ><label for="#google_translate_element" >🌐</label></div>
-	<h1>Welcome to my website</h1>
-	<p>how are you doing today</p>
-	
-	<span id="google_translate_element" >🌐</span>
+	<div id="google_translate_element" ></div>
+	<div id="lang" ></div>
+	<div class="container" >
+		<h1>Welcome to my website</h1>
+		<p>how are you doing today</p>
+	</div>
+	<div class="container" >
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<script type="text/javascript">
 		function googleTranslateElementInit(){
 			new google.translate.TranslateElement(
-			{pageLanguage : 'en'},
+			{pageLanguage : 'en',
+			 },
 			'google_translate_element'
 		);
 		}
