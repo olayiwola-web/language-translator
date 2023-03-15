@@ -1,135 +1,89 @@
 <!DOCTYPE html>
-
 <html lang="en" >
-
 <head>
-
-<title>Language translator App</title>
-
+<title translate="no">Language translator App</title>
 <meta name="viewport" content="width=device-width , initial-scale=1">
-
 <style type="text/css">
-
 	*{
-
 		padding:0;
-
 		margin:0;
-
 		box-sizing:content-box;
-
 	}
-
 	body {
-
 		background: #f0f0f0;
-
 	}
-
 	header {
-
 		display:block;
-
 		background:indigo;
-
 		height:50px;
-
 		position:sticky;
-
 		top:0;
-
 		margin-bottom:10px;
-
 	}
-
 	header p {
-
 		color:#fff;
-
-		font-size:200%;
-
+		font-size:30px;
 		font-weight:700;
-
 		text-align:center;
-
 		padding-top:10px;
-
 	}
-
 	#lang {
-
 		position:fixed;
-
 		right:0;
-
-		font-size:150%;
-
+		font-size:30px;
 		padding:8px;
-
 		background:#d5d5d5;
-
 		border-radius:10px;
-
 		margin-right:10px;
-
 	}
-
 	#lang:active {
-
 		background:#ccc;
-
 	}
-
-	#google_translate_element {
-
+	#google_translate_element select{
+		background:#f6edfd;
+		color:#383ffa;
+		border: none;
+		border-radius:3px;
+		padding:6px 8px;
 	}
-
-</style>
-
-</head>
-
-<body>
-
-	<header translate="no">
-
-		<p>Language Translator App</p>
-
-	</header>
-
-	<div id="lang" ><label for="#google_translate_element" >🌐</label></div>
-
-	<h1>Welcome to my website</h1>
-
-	<p>how are you doing today</p>
-
+	.goog-logo-link{
+		display:none!important;
+	}
+	.goog-te-gadget{
+		color:transparent!important;
+	} 
+	.goog-te-banner-frame{
+		display:none !important;
+	}
 	
-
-	<span id="google_translate_element" ></span1>
-
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-	<script type="text/javascript">
-
-		function googleTranslateElementInit(){
-
-			new google.translate.TranslateElement(
-
-			{pageLanguage : 'en'},
-
-			'google_translate_element'
-
-	);
-
+	#goog-gt-tt, .goog-te-balloon-frame{
+		display: none !important;
 	}
-
-	/*document.querySelector("#google_translate_element").onchange = function(){
-
-		alert(this.value)
-
-	}*/
-
+	.goog-text-highlight { 
+		background: none !important; 
+		box-shadow: none !important;
+	}
+	
+</style>
+</head>
+<body>
+	<header translate="no">
+		<p>Language Translator App</p>
+	</header>
+	<div id="lang" ><label for="#google_translate_element" >🌐</label></div>
+	<h1>Welcome to my website</h1>
+	<p>how are you doing today</p>
+	
+	<span id="google_translate_element" >🌐</span>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script type="text/javascript">
+		function googleTranslateElementInit(){
+			new google.translate.TranslateElement(
+			{pageLanguage : 'en'},
+			'google_translate_element'
+		);
+		}
 	</script>
-
 </body>
-
 </html>
