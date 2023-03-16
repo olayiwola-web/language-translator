@@ -36,11 +36,22 @@
 		window.onload = function() {
 			googleTranslateElementInit();
 		};
-		var cookieName = 'googtrans';
-		var cookieValue = 'es';
-		var myDate = new Date();
-		myDate.setMonth(myDate.getMonth() + 12);
-		document.cookie = cookieName +"=" + cookieValue + ";expires=" + myDate + ";domain=https://translategoogle.netlify.app/;path=/";
+	</script>
+	<script type="text/javascript">
+	var cookies = document.cookie.split(';');
+	for (var i = 0; i < cookies.length; i++) {
+	  var cookie = cookies[i].trim();
+	  if (cookie.startsWith("googtrans=")) {
+	    var value = cookie.substring("googtrans=".length, cookie.length);
+	    // modify the cookie value
+	    value = "fr|en|translategoogle.netlify.app";
+	    // update the cookie
+	    document.cookie = "googtrans=" + value + "; path=/";
+	    break;
+	  }
+	}
+	
+	
 	</script>
 </body>
 </html>
