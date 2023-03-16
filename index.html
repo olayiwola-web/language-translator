@@ -1,114 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-<title translate="no">Language translator App</title>
-<meta name="viewport" content="width=device-width , initial-scale=1">
-<style type="text/css">
-	*{
-		padding:0;
-		margin:0;
-		box-sizing:content-box;
-	}
-	body {
-		background: #f0f0f0;
-	}
-	header {
-		display:block;
-		background:indigo;
-		height:50px;
-		position:sticky;
-		top:0;
-		margin-bottom:10px;
-	}
-	header p {
-		color:#fff;
-		font-size:30px;
-		font-weight:700;
-		text-align:center;
-		padding-top:10px;
-	}
-	#google_translate_element select{
-		background:#f6edfd;
-		color:#383ffa;
-		border: none;
-		border-radius:3px;
-		padding:6px 8px;
-	}
-	.goog-logo-link{
-		display:none !important;
-		visibility:hidden;
-	}
-	.goog-te-gadget{
-		color:transparent!important;
-		max-height:30px;
-		overflow:hidden;
-	}
-	.goog-te-banner-frame{
-		display:none !important;
-	}
-	
-	#goog-gt-tt, .goog-te-balloon-frame{
-		display: none !important;
-	}
-	.goog-text-highlight { 
-		background: none !important; 
-		box-shadow: none !important;
-	}
-	#google_translate_element {
-		display:flex;
-	}
-	#google_translate_element > * {
-		justify-content:center;
-		justify-items:center;
-	}
-	.container {
-		padding:10px;
-	}
-	.container p {
-		line-height:25px;
-	}
-</style>
+<title></title>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-	<header translate="no">
-		<p>Language Translator App</p>
-	</header>
-	<div id="google_translate_element" ></div>
-	<div id="lang" ></div>
-	<div class="container" >
-		<h1>Welcome to my website</h1>
-		<p>how are you doing today</p>
-	</div>
-	<div class="container" >
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<h6><i><strong><big>#7</big></strong></i></h6>
+	<h1>Welcome to my page</h1>
+	
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<div id="google_translate_element"></div>
+	
 	<script type="text/javascript">
-		function googleTranslateElementInit(){
-			new google.translate.TranslateElement(
-			{pageLanguage : 'en',
-			 },
-			'google_translate_element'
-		);
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({
+		    pageLanguage: 'en',
+		    includedLanguages: 'fr,es',
+		    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+		  }, 'google_translate_element');
 		}
+		window.onload = function() {
+			googleTranslateElementInit();
+		};
+		var cookieName = 'googtrans';
+		var cookieValue = 'es';
+		var myDate = new Date();
+		myDate.setMonth(myDate.getMonth() + 12);
+		document.cookie = cookieName +"=" + cookieValue + ";expires=" + myDate + ";domain=.https://translategoogle.netlify.app/;path=/";
 	</script>
 </body>
 </html>
