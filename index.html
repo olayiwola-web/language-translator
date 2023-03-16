@@ -11,9 +11,6 @@
 	.skiptranslate {
 		visibility:hidden;
 	}
-	body {
-		top:0 !important;
-	}
 </style>
 </head>
 <body>
@@ -63,11 +60,7 @@
 				
 				// modify the cookie value
 				value = "/en/tr";
-				//var expires = new Date();
-				//expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
-				
 				// update the cookie
-			//	document.cookie = "googtrans=" + value + "; path=/"; // "expires=" + expires.toUTCString();
                 document.cookie = 'googtrans=/en/' + defaultLang; +  path;
 				break;
 			}
