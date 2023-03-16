@@ -53,7 +53,7 @@
 		var path = "path=/";
 		var defaultLang = generateLang()
 		//document.cookie = "googtrans=/en/tr;" + path;
-		document.cookie = "googtrans=/en/" + defaultLang + ";” + path;
+		document.cookie = 'googtrans=/en/' + defaultLang; +  path;
 		
 		var cookies = document.cookie.split(';');
 		for (var i = 0; i < cookies.length; i++) {
