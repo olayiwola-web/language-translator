@@ -51,7 +51,8 @@
 		
 		// cookies
 		var path = "path=/";
-		document.cookie = "googtrans=/en/tr;" + path;
+		//document.cookie = "googtrans=/en/tr;" + path;
+		document.cookie = "googtrans=/en/" + tr + ";” + "path;
 		
 		var cookies = document.cookie.split(';');
 		for (var i = 0; i < cookies.length; i++) {
@@ -69,7 +70,12 @@
 				break;
 			}
 		}
-	
+			function generateLang(){
+			var lang = navigator.language
+			var lang_iso = lang.substring(0, 2);
+			
+			return lang_iso;
+		}
 	</script>
 </body>
 </html>
