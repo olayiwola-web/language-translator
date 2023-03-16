@@ -36,25 +36,23 @@
 		window.onload = function() {
 			googleTranslateElementInit();
 		};
-	</script>
-	<script type="text/javascript">
-	var cookies = document.cookie.split(';');
-	for (var i = 0; i < cookies.length; i++) {
-	  var cookie = cookies[i].trim();
-	  if (cookie.startsWith("googtrans=")) {
-	    var value = cookie.substring("googtrans=".length, cookie.length);
-	    
-	    // modify the cookie value
-	    value = "/en/tr";
-	    expires = new Date();
-	    expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
-	    
-	    // update the cookie
-	    document.cookie = "googtrans=" + value + "; path=/"; expires=" + expires.toUTCString() + ";
-	    break;
-	  }
-	}
-	
+		// cookies
+		var cookies = document.cookie.split(';');
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = cookies[i].trim();
+				if (cookie.startsWith("googtrans=")) {
+				var value = cookie.substring("googtrans=".length, cookie.length);
+				
+				// modify the cookie value
+				value = "/en/tr";
+				expires = new Date();
+				expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
+				
+				// update the cookie
+				document.cookie = "googtrans=" + value + "; path=/"; expires= expires.toUTCString();
+				break;
+			}
+		}
 	
 	</script>
 </body>
