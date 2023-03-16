@@ -43,14 +43,14 @@
 	  var cookie = cookies[i].trim();
 	  if (cookie.startsWith("googtrans=")) {
 	    var value = cookie.substring("googtrans=".length, cookie.length);
+	    
 	    // modify the cookie value
 	    value = "/en/tr";
 	    expires = new Date();
-	    expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days in milliseconds
-	  //  document.cookie = "name=value; expires=" + expires.toUTCString() + "; path=/";
+	    expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
 	    
 	    // update the cookie
-	    document.cookie = "googtrans=" + value + expires.toUTCString() + "; path=/";
+	    document.cookie = "googtrans=" + value + "; path=/"; expires=" + expires.toUTCString() + ";
 	    break;
 	  }
 	}
