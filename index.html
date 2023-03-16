@@ -37,7 +37,11 @@
 		window.onload = function() {
 			googleTranslateElementInit();
 		};
+		
 		// cookies
+		var path = "path=/";
+		document.cookie = "googtrans=/en/tr;" + path;
+		
 		var cookies = document.cookie.split(';');
 		for (var i = 0; i < cookies.length; i++) {
 			var cookie = cookies[i].trim();
@@ -46,11 +50,11 @@
 				
 				// modify the cookie value
 				value = "/en/tr";
-				var expires = new Date();
-				expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
+				//var expires = new Date();
+				//expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days
 				
 				// update the cookie
-				document.cookie = "googtrans=" + value + "; path=/"; "expires=" + expires.toUTCString();
+				document.cookie = "googtrans=" + value + "; path=/"; // "expires=" + expires.toUTCString();
 				break;
 			}
 		}
